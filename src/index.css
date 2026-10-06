@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-primary-green: #113620; /* Very dark rich green */
+  --color-accent-orange: #f28c28; /* The orange/gold button color */
+  --color-light-bg: #fcfbf8; /* The very light cream background */
+  --color-text-main: #222222;
+  --color-text-muted: #555555;
+  --font-brush: 'Caveat Brush', cursive;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-light-bg);
+  color: var(--color-text-main);
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 25s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+.animate-marquee-slow {
+  animation: marquee 40s linear infinite;
+}
+
+.animate-marquee-slow:hover {
+  animation-play-state: paused;
+}
+
+.pause {
+  animation-play-state: paused;
+}
+/* Adding group hover support natively */
+.group:hover .animate-marquee-slow {
+  animation-play-state: paused;
+}
