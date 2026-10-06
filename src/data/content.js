@@ -23,7 +23,7 @@ export const galleryImages = Array.from({ length: 18 }, (_, i) =>
   new URL(`../assets/img${i + 1}.jpeg`, import.meta.url).href
 );
 
-export const videos = Array.from({ length: 4 }, (_, i) =>
+export const videos = Array.from({ length: 3 }, (_, i) =>
   new URL(`../assets/vid${i + 1}.mp4`, import.meta.url).href
 );
 
