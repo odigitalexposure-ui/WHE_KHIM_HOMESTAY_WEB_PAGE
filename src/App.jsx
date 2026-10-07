@@ -11,6 +11,8 @@ import Gallery from "./components/Gallery";
 import VideoGallery from "./components/VideoGallery";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import PopupBanner from "./components/PopupBanner";
+
 
 function App() {
   useEffect(() => {
@@ -25,13 +27,14 @@ function App() {
   return (
     <div className="w-full min-h-screen font-sans selection:bg-accent-orange selection:text-white">
       <Navbar />
+      <PopupBanner />
       <main>
         <Hero />
         <Features />
-        <Pricing />
         <About />
         <Services />
         <Gallery />
+        <Pricing />
         <VideoGallery />
         <Contact />
       </main>

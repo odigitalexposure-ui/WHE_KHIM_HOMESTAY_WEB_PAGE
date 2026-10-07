@@ -13,17 +13,25 @@ export const businessInfo = {
 };
 
 export const heroImages = [
-  new URL('../assets/img12.jpeg', import.meta.url).href,
-  new URL('../assets/img13.jpeg', import.meta.url).href,
-  new URL('../assets/img15.jpeg', import.meta.url).href,
-  new URL('../assets/img7.jpeg', import.meta.url).href,
+  new URL('../assets/hero1.png', import.meta.url).href,
+  new URL('../assets/hero2.png', import.meta.url).href,
+  new URL('../assets/hero3.png', import.meta.url).href,
+  new URL('../assets/hero4.png', import.meta.url).href,
+  new URL('../assets/hero5.jpeg', import.meta.url).href,
+  new URL('../assets/hero6.jpeg', import.meta.url).href,
+  new URL('../assets/hero7.jpeg', import.meta.url).href,
+  new URL('../assets/hero8.jpeg', import.meta.url).href,
+  new URL('../assets/hero9.jpeg', import.meta.url).href,
 ];
 
-export const galleryImages = Array.from({ length: 18 }, (_, i) =>
-  new URL(`../assets/img${i + 1}.jpeg`, import.meta.url).href
-);
+export const galleryImages = [
+  ...[2, 7, 9, 12, 14, 17].map(i => new URL(`../assets/img${i}.jpeg`, import.meta.url).href),
+  new URL('../assets/gallery_new_ext.png', import.meta.url).href,
+  new URL('../assets/gallery_new_bed.png', import.meta.url).href,
+  new URL('../assets/gallery_new_bath.jpg', import.meta.url).href,
+];
 
-export const videos = Array.from({ length: 3 }, (_, i) =>
+export const videos = Array.from({ length: 4 }, (_, i) =>
   new URL(`../assets/vid${i + 1}.mp4`, import.meta.url).href
 );
 

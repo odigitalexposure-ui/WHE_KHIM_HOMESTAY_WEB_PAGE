@@ -12,88 +12,85 @@ const Hero = () => {
   }, []);
 
   return (
-    <section id="home" className="relative min-h-[85vh] w-full flex items-center justify-center pt-24 pb-12 overflow-hidden bg-[#1a1c23]">
+    <section id="home" className="relative h-screen w-full flex items-center justify-center overflow-hidden">
       
-      {/* Container for the Large Card */}
-      <div className="relative z-10 w-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 h-[450px] md:h-[500px] lg:h-[550px]">
+      {/* Immersive Cinematic Background Slider */}
+      {heroImages.map((img, idx) => {
+        const isActive = idx === currentSlide;
+        return (
+          <div 
+            key={idx} 
+            className={`absolute inset-0 transition-opacity duration-[2000ms] ease-in-out ${
+              isActive ? "opacity-100 z-10" : "opacity-0 z-0"
+            }`}
+          >
+            {/* Dark overlays for perfect text readability and dramatic effect */}
+            <div className="absolute inset-0 bg-black/40 z-10" /> 
+            <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-transparent to-black/80 z-10" /> 
+            
+            {/* The image itself with a slow continuous zoom (Ken Burns effect) */}
+            <img 
+              src={img} 
+              alt={`Hero landscape ${idx}`} 
+              className={`w-full h-full object-cover transition-transform duration-[10000ms] ease-linear ${
+                isActive ? "scale-110" : "scale-100"
+              }`} 
+            />
+          </div>
+        );
+      })}
+
+      {/* Hero Content Center Aligned */}
+      <div className="relative z-20 w-full max-w-5xl mx-auto px-4 flex flex-col items-center text-center mt-16 md:mt-24">
         
-        {/* The Premium Large Card */}
-        <div className="w-full h-full relative rounded-[24px] md:rounded-[36px] overflow-hidden shadow-2xl shadow-black/50 border border-white/5 group">
-          
-          {/* Background Images Auto Sliding (Right to Left) */}
-          {heroImages.map((img, idx) => {
-            // Right to Left sliding logic: 
-            // Incoming slides enter from right (translate-x-full)
-            // Outgoing slides exit to left (-translate-x-full)
-            let transformClass = "translate-x-full opacity-0 z-0 scale-105"; 
-            if (idx === currentSlide) {
-              transformClass = "translate-x-0 opacity-100 z-10 scale-100"; // Active
-            } else if (idx === (currentSlide - 1 + heroImages.length) % heroImages.length) {
-              transformClass = "-translate-x-full opacity-0 z-0 scale-105"; // Outgoing
-            } else {
-              transformClass = "translate-x-full opacity-0 z-0 hidden scale-105"; // Waiters
-            }
-
-            return (
-              <div 
-                key={idx} 
-                className={`absolute inset-0 transition-all duration-1000 ease-in-out ${transformClass}`}
-              >
-                <img 
-                  src={img} 
-                  alt={`Hero mountain slide ${idx}`} 
-                  className="w-full h-full object-cover" 
-                />
-              </div>
-            );
-          })}
-
-          {/* Deep dark gradient overlay inside the card so text pops beautifully */}
-          <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/40 to-transparent z-20 pointer-events-none" />
-          <div className="absolute inset-0 bg-black/20 z-20 pointer-events-none" /> {/* Subtle global darkening */}
-          
-          {/* Text Content Overlay (Stay on Left Side) */}
-          <div className="absolute inset-0 z-30 flex flex-col justify-center px-6 md:px-12 lg:px-20 w-full max-w-4xl pb-4">
-            <span className="text-white/90 tracking-widest uppercase text-xs md:text-sm font-bold mb-2 md:mb-3 flex items-center gap-3">
-              <span className="w-8 h-[2px] bg-accent-orange"></span> 
-              <span className="drop-shadow-md">EXPLORE THE WORLD</span>
-            </span>
-            
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-[1.1] mb-3 md:mb-4 drop-shadow-xl">
-              Discover Nature.<br />
-              <span className="font-brush text-5xl md:text-6xl lg:text-[6rem] text-accent-orange font-normal mt-1 inline-block drop-shadow-2xl">Find Your Escape.</span>
-            </h1>
-            
-            <p className="text-white/90 text-sm md:text-base mb-6 md:mb-8 max-w-lg font-medium drop-shadow-lg leading-relaxed">
-              Breathtaking places, unforgettable experiences, crafted just for you at {businessInfo.name}.
-            </p>
-            
-            <a
-              href="#about"
-              className="bg-accent-orange hover:bg-orange-600 text-white px-8 py-4 rounded-full text-base font-bold transition-all shadow-[0_0_20px_rgba(249,115,22,0.4)] hover:shadow-[0_0_30px_rgba(249,115,22,0.6)] hover:-translate-y-1 flex items-center gap-2 group w-fit"
-            >
-              Explore Now 
-              <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-              </svg>
-            </a>
-          </div>
-
-          {/* Slide Navigation Indicators */}
-          <div className="absolute bottom-8 left-6 md:left-16 z-30 flex gap-3">
-            {heroImages.map((_, idx) => (
-              <div 
-                key={idx} 
-                className={`h-2 rounded-full transition-all duration-700 ease-out ${
-                  idx === currentSlide ? "w-10 bg-accent-orange shadow-[0_0_10px_rgba(249,115,22,0.8)]" : "w-2 bg-white/40 hover:bg-white/60 cursor-pointer"
-                }`}
-                onClick={() => setCurrentSlide(idx)}
-              />
-            ))}
-          </div>
-
+        {/* Top Tagline */}
+        <div 
+          className="flex items-center gap-3 mb-4 md:mb-6 animate-fade-in-up"
+          style={{ animationDelay: '0.2s', animationFillMode: 'both' }}
+        >
+          <span className="w-10 md:w-16 h-[2px] bg-accent-orange shadow-[0_0_8px_rgba(249,115,22,0.8)]"></span> 
+          <span className="text-white/95 tracking-[0.2em] md:tracking-[0.3em] uppercase text-xs md:text-sm font-semibold drop-shadow-md">
+            Welcome to Paradise
+          </span>
+          <span className="w-10 md:w-16 h-[2px] bg-accent-orange shadow-[0_0_8px_rgba(249,115,22,0.8)]"></span> 
         </div>
+        
+        {/* Main Headline */}
+        <h1 
+          className="text-4xl md:text-6xl lg:text-[5.5rem] font-serif text-white leading-[1.1] mb-2 md:mb-4 drop-shadow-2xl animate-fade-in-up"
+          style={{ animationDelay: '0.4s', animationFillMode: 'both' }}
+        >
+          Escape to the <br />
+          <span className="font-brush text-[4.5rem] md:text-[8rem] lg:text-[10rem] text-accent-orange font-normal mt-0 md:mt-2 inline-block drop-shadow-[0_5px_15px_rgba(0,0,0,0.5)] filter brightness-110">
+            Himalayas
+          </span>
+        </h1>
+        
+        {/* Subtitle */}
+        <p 
+          className="text-gray-200 text-sm md:text-xl lg:text-2xl mb-10 max-w-2xl font-light drop-shadow-lg leading-relaxed animate-fade-in-up"
+          style={{ animationDelay: '0.6s', animationFillMode: 'both' }}
+        >
+          Experience serene luxury and authentic hospitality at <br className="hidden md:block" />
+          <strong className="font-bold text-white tracking-wide">{businessInfo.name}</strong>, your home amidst the clouds.
+        </p>
+        
+
       </div>
+
+
+
+      {/* Scroll Down Mouse Indicator */}
+      <a 
+        href="#about" 
+        className="absolute bottom-10 right-8 lg:right-12 z-30 hidden md:flex flex-col items-center gap-3 text-white/50 hover:text-white transition-colors cursor-pointer group"
+      >
+        <span className="text-[10px] uppercase tracking-[0.3em] font-bold" style={{ writingMode: 'vertical-rl' }}>Scroll</span>
+        <div className="w-[1px] h-12 bg-white/30 relative overflow-hidden">
+          <div className="w-full h-1/2 bg-white absolute top-0 left-0 animate-[scrollDown_2s_ease-in-out_infinite]" />
+        </div>
+      </a>
+      
     </section>
   );
 };

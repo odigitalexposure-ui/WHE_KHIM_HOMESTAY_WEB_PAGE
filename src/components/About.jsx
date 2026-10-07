@@ -11,7 +11,7 @@ const iconMap = {
 
 // Specifically requested images for the About slider
 const aboutImages = [
-  new URL('../assets/img1.jpeg', import.meta.url).href,
+  new URL('../assets/img1.png', import.meta.url).href,
   new URL('../assets/img3.jpeg', import.meta.url).href,
 ];
 
@@ -96,11 +96,11 @@ const About = () => {
                       key={idx}
                       className={`absolute inset-0 transition-all duration-1000 ease-in-out ${transformClass}`}
                     >
-                      {/* Using object-cover to elegantly fill the perfectly matched height */}
+                      {/* Using object-contain to prevent the poster from being cropped */}
                       <img
                         src={img}
                         alt="About WHE KHIM Homestay"
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-contain bg-gray-50/50"
                       />
                     </div>
                   );
