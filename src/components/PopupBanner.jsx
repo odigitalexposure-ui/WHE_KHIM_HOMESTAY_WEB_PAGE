@@ -32,6 +32,7 @@ const PopupBanner = () => {
         <img
           src={bannerImg}
           alt="Promotional Banner"
+          loading="lazy"
           className="w-full h-auto rounded-lg object-cover"
         />
       </div>

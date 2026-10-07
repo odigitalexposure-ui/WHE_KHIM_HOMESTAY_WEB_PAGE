@@ -45,12 +45,10 @@ const About = () => {
                 Experience the True Essence of Darjeeling
               </h2>
               <p className="text-gray-600 mb-6 leading-relaxed text-lg" data-aos="fade-up" data-aos-delay="300">
-                Nestled in the peaceful village of Yolmo Gaon, Upper Lamahatta, 
-                <strong className="text-[#2a3c24]"> WHE KHIM HOMESTAY </strong> 
-                offers a serene retreat away from the bustle of city life. Surrounded by lush greenery, pine forests, and breathtaking Himalayan views, we provide a warm, comfortable, and authentic local atmosphere.
+                Welcome to <strong className="text-[#2a3c24]">WHE KHIM HOMESTAY</strong>, widely considered the best homestay in Lepchajagat region. If you are looking for an offbeat homestay near Darjeeling or a Darjeeling homestay with Kanchenjunga view that offers a peaceful retreat, your search ends here. Nestled in the serene village of Yolmo Gaon, Upper Lamahatta, we provide the perfect nature homestay near Tiger Hill, far away from the bustle of city life.
               </p>
               <p className="text-gray-600 mb-10 leading-relaxed text-lg">
-                Whether you are looking for a quiet nature escape, a comfortable stopover while exploring Darjeeling and Tukdah, or a place to experience genuine Himalayan hospitality, our home is ready to welcome you.
+                Whether you are seeking the best homestay in Darjeeling for a quiet escape or an affordable budget homestay in Darjeeling for family vacations, our home is ready to welcome you. For seamless travel planning and Sukhia Pokhri homestay booking, we ensure you experience genuine Himalayan hospitality and absolute comfort.
               </p>
 
               {/* Highlights Grid */}
@@ -100,6 +98,7 @@ const About = () => {
                       <img
                         src={img}
                         alt="About WHE KHIM Homestay"
+                        loading="lazy"
                         className="w-full h-full object-contain bg-gray-50/50"
                       />
                     </div>

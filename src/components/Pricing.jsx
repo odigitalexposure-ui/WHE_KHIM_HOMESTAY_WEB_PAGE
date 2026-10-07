@@ -75,6 +75,7 @@ const Pricing = () => {
                 <img 
                   src={item.image} 
                   alt={item.title}
+                  loading="lazy"
                   className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-in-out"
                 />
                 
