@@ -11,8 +11,8 @@ const iconMap = {
 
 // Specifically requested images for the About slider
 const aboutImages = [
-  new URL('../assets/img1.png', import.meta.url).href,
-  new URL('../assets/img3.jpeg', import.meta.url).href,
+  new URL("../assets/img1.png", import.meta.url).href,
+  new URL("../assets/img3.jpeg", import.meta.url).href,
 ];
 
 const About = () => {
@@ -28,27 +28,48 @@ const About = () => {
   return (
     <section id="about" className="py-20 md:py-28 bg-[#f5f5f5]">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
-        
         {/* The Premium Card Base */}
-        <div 
+        <div
           className="bg-white rounded-[32px] md:rounded-[48px] shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 p-8 md:p-12 lg:p-16 relative overflow-hidden"
           data-aos="fade-up"
         >
           <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-stretch">
-            
             {/* Left: Content */}
             <div className="w-full lg:w-1/2 order-2 lg:order-1 flex flex-col justify-center">
-              <h4 className="text-accent-orange font-brush text-3xl md:text-4xl mb-2 tracking-wide transform -rotate-1 origin-left" data-aos="fade-up" data-aos-delay="100">
+              <h4
+                className="text-accent-orange font-brush text-3xl md:text-4xl mb-2 tracking-wide transform -rotate-1 origin-left"
+                data-aos="fade-up"
+                data-aos-delay="100"
+              >
                 A Home In The Himalayas
               </h4>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif text-[#2a3c24] mb-6 leading-tight" data-aos="fade-up" data-aos-delay="200">
+              <h2
+                className="text-3xl md:text-4xl lg:text-5xl font-serif text-[#2a3c24] mb-6 leading-tight"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
                 Experience the True Essence of Darjeeling
               </h2>
-              <p className="text-gray-600 mb-6 leading-relaxed text-lg" data-aos="fade-up" data-aos-delay="300">
-                Welcome to <strong className="text-[#2a3c24]">WHE KHIM HOMESTAY</strong>, widely considered the best homestay in Lepchajagat region. If you are looking for an offbeat homestay near Darjeeling or a Darjeeling homestay with Kanchenjunga view that offers a peaceful retreat, your search ends here. Nestled in the serene village of Yolmo Gaon, Upper Lamahatta, we provide the perfect nature homestay near Tiger Hill, far away from the bustle of city life.
+              <p
+                className="text-gray-600 mb-6 leading-relaxed text-lg"
+                data-aos="fade-up"
+                data-aos-delay="300"
+              >
+                Welcome to{" "}
+                <strong className="text-[#2a3c24]">WHE KHIM HOMESTAY</strong>,
+                widely considered the best homestay in Yolmo Gaon, Darjeeling.
+                If you are looking for an offbeat homestay near Darjeeling or a
+                Darjeeling homestay with Kanchenjunga view that offers a
+                peaceful retreat, your search ends here. Nestled in the serene
+                village of Yolmo Gaon, Upper Lamahatta, we provide the perfect
+                nature homestay, far away from the bustle of city life.
               </p>
               <p className="text-gray-600 mb-10 leading-relaxed text-lg">
-                Whether you are seeking the best homestay in Darjeeling for a quiet escape or an affordable budget homestay in Darjeeling for family vacations, our home is ready to welcome you. For seamless travel planning and Sukhia Pokhri homestay booking, we ensure you experience genuine Himalayan hospitality and absolute comfort.
+                Whether you are seeking the best homestay in Darjeeling for a
+                quiet escape or an affordable budget homestay in Darjeeling for
+                family vacations, our home is ready to welcome you. For seamless
+                travel planning and we ensure you experience genuine Himalayan
+                hospitality and absolute comfort.
               </p>
 
               {/* Highlights Grid */}
@@ -77,20 +98,22 @@ const About = () => {
             {/* Right: Image Auto Slider */}
             <div className="w-full lg:w-1/2 order-1 lg:order-2 flex">
               <div className="relative w-full h-[400px] sm:h-[500px] lg:h-auto lg:flex-1 rounded-[24px] md:rounded-[32px] overflow-hidden shadow-2xl group border-[8px] border-white">
-                
                 {aboutImages.map((img, idx) => {
                   // Sliding transition (Right to Left)
-                  let transformClass = "translate-x-full opacity-0 z-0"; 
+                  let transformClass = "translate-x-full opacity-0 z-0";
                   if (idx === currentSlide) {
                     transformClass = "translate-x-0 opacity-100 z-10"; // Active
-                  } else if (idx === (currentSlide - 1 + aboutImages.length) % aboutImages.length) {
+                  } else if (
+                    idx ===
+                    (currentSlide - 1 + aboutImages.length) % aboutImages.length
+                  ) {
                     transformClass = "-translate-x-full opacity-0 z-0"; // Outgoing
                   } else {
                     transformClass = "translate-x-full opacity-0 z-0 hidden"; // Waiters
                   }
 
                   return (
-                    <div 
+                    <div
                       key={idx}
                       className={`absolute inset-0 transition-all duration-1000 ease-in-out ${transformClass}`}
                     >
@@ -108,18 +131,18 @@ const About = () => {
                 {/* Optional Dots for slider */}
                 <div className="absolute bottom-6 left-0 right-0 z-20 flex justify-center gap-2">
                   {aboutImages.map((_, idx) => (
-                    <div 
+                    <div
                       key={idx}
                       className={`h-2 rounded-full transition-all duration-500 ${
-                        idx === currentSlide ? "w-8 bg-accent-orange shadow-md" : "w-2 bg-white/70 shadow-md"
+                        idx === currentSlide
+                          ? "w-8 bg-accent-orange shadow-md"
+                          : "w-2 bg-white/70 shadow-md"
                       }`}
                     />
                   ))}
                 </div>
-
               </div>
             </div>
-            
           </div>
         </div>
       </div>
