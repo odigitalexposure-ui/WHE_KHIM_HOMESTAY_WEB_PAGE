@@ -65,11 +65,11 @@ const About = () => {
                 nature homestay, far away from the bustle of city life.
               </p>
               <p className="text-gray-600 mb-10 leading-relaxed text-lg">
-                Whether you are seeking the best homestay in Darjeeling for a
-                quiet escape or an affordable budget homestay in Darjeeling for
-                family vacations, our home is ready to welcome you. For seamless
-                travel planning and we ensure you experience genuine Himalayan
-                hospitality and absolute comfort.
+                Whether you are seeking the best Homestay at Lamahata in
+                Darjeeling district for a quiet escape or an affordable budget
+                homestay in Darjeeling for family vacations, our home is ready
+                to welcome you. For seamless travel planning and we ensure you
+                experience genuine Himalayan hospitality and absolute comfort.
               </p>
 
               {/* Highlights Grid */}
