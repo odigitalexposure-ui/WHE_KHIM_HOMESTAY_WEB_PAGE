@@ -7,6 +7,7 @@ import Features from "./components/Features";
 import About from "./components/About";
 import Services from "./components/Services";
 import Pricing from "./components/Pricing";
+import Reviews from "./components/Reviews";
 import Gallery from "./components/Gallery";
 import TouristSpots from "./components/TouristSpots";
 import VideoGallery from "./components/VideoGallery";
@@ -37,6 +38,7 @@ function App() {
         <Services />
         <Gallery />
         <Pricing />
+        <Reviews />
         <VideoGallery />
         <Contact />
       </main>
