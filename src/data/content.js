@@ -109,3 +109,60 @@ export const amenities = [
   }
 ];
 
+export const touristSpots = [
+  {
+    name: "Lamahatta Eco Park",
+    description: "Immerse yourself in nature's embrace at this tranquil eco-park. Wander through misty pine forests, vibrant prayer flags, and manicured gardens while soaking in breathtaking, unhindered views of the majestic mountain ranges.",
+    distance: "1-2 km",
+    image: new URL('../assets/tourist_img1.png', import.meta.url).href
+  },
+  {
+    name: "Castleton Tea Estate",
+    description: "Stroll through the lush, emerald green slopes of this world-renowned tea estate. Capture picture-perfect moments amidst the rolling hills and breathe in the crisp, aromatic air of Darjeeling's finest tea gardens.",
+    distance: "2.9-3 km",
+    image: new URL('../assets/tourist_img2.png', import.meta.url).href
+  },
+  {
+    name: "Ambotia Shiva Mandir",
+    description: "Find spiritual solace and divine tranquility at this revered local temple. Nestled amidst serene natural surroundings, it's the perfect spot for quiet reflection, meditation, and escaping the bustling outside world.",
+    distance: "2.9-3 km",
+    image: new URL('../assets/tourist_img3.png', import.meta.url).href
+  },
+  {
+    name: "Giddapahar View Point",
+    description: "Experience a sweeping panorama of the Himalayan landscape from this spectacular vantage point. Perfect for photography enthusiasts looking to capture the dramatic valleys, winding roads, and endless skies of the region.",
+    distance: "2.9-3 km",
+    image: new URL('../assets/tourist_img4.png', import.meta.url).href
+  },
+  {
+    name: "Tinchuley Viewpoint",
+    description: "A charming hillside hamlet offering an untouched slice of paradise. Famous for its sprawling tea gardens, fresh orange orchards, and unparalleled, 180-degree panoramic views of the mighty Kanchenjunga.",
+    distance: "6–8 km",
+    image: new URL('../assets/tourist_img5.png', import.meta.url).href
+  },
+  {
+    name: "Takdah Orchid Centre",
+    description: "Step into a floral wonderland showcasing a rare, mesmerizing collection of Himalayan orchids and exotic ornamental plants. A true paradise for nature lovers and botany enthusiasts seeking vibrant colors and sweet fragrances.",
+    distance: "8–12 km",
+    image: new URL('../assets/tourist_img6.png', import.meta.url).href
+  },
+  {
+    name: "Batasia Loop",
+    description: "Witness an engineering marvel where the heritage Toy Train spirals around a beautifully landscaped garden. Enjoy a 360-degree vista of Darjeeling's rolling hills and the snow-capped Kanchenjunga towering in the distance.",
+    distance: "20–27 km",
+    image: new URL('../assets/tourist_img7.png', import.meta.url).href
+  },
+  {
+    name: "Tiger Hill",
+    description: "The crown jewel of Darjeeling, famous worldwide for its magical sunrises. Watch in awe as the first light of dawn paints the snow-clad peaks of Mount Kanchenjunga and Everest in breathtaking shades of pink and gold.",
+    distance: "20–30 km",
+    image: new URL('../assets/tourist_img8.png', import.meta.url).href
+  },
+  {
+    name: "Japanese Peace Pagoda",
+    description: "Discover profound peace at this stunning Buddhist monument showcasing magnificent traditional architecture. The gleaming white stupa offers a serene atmosphere coupled with spectacular, sweeping views of the entire Darjeeling valley.",
+    distance: "22–28 km",
+    image: new URL('../assets/tourist_img9.png', import.meta.url).href
+  }
+];
+

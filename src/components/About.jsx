@@ -57,19 +57,31 @@ const About = () => {
               >
                 Welcome to{" "}
                 <strong className="text-[#2a3c24]">WHE KHIM HOMESTAY</strong>,
-                widely considered the best homestay in Yolmo Gaon, Darjeeling.
-                If you are looking for an offbeat homestay near Darjeeling or a
-                Darjeeling homestay with Kanchenjunga view that offers a
+                widely considered the best homestay at{" "}
+                <span className="text-accent-orange font-medium">Lamahata in Darjeeling district</span>.
+                If you are looking for an offbeat homestay near{" "}
+                <span className="text-accent-orange font-medium">Darjeeling</span>{" "}
+                or a{" "}
+                <span className="text-accent-orange font-medium">Darjeeling</span>{" "}
+                homestay with{" "}
+                <span className="text-accent-orange font-medium">Kanchenjunga</span>{" "}
+                view that offers a
                 peaceful retreat, your search ends here. Nestled in the serene
-                village of Yolmo Gaon, Upper Lamahatta, we provide the perfect
+                village of{" "}
+                <span className="text-accent-orange font-medium">Yolmo Gaon, Upper Lamahatta</span>, we provide the perfect
                 nature homestay, far away from the bustle of city life.
               </p>
               <p className="text-gray-600 mb-10 leading-relaxed text-lg">
-                Whether you are seeking the best Homestay at Lamahata in
-                Darjeeling district for a quiet escape or an affordable budget
-                homestay in Darjeeling for family vacations, our home is ready
+                Whether you are seeking the best Homestay at{" "}
+                <span className="text-accent-orange font-medium">Lamahata in Darjeeling district</span>{" "}
+                for a quiet escape or an affordable budget
+                homestay in{" "}
+                <span className="text-accent-orange font-medium">Darjeeling</span>{" "}
+                for family vacations, our home is ready
                 to welcome you. For seamless travel planning and we ensure you
-                experience genuine Himalayan hospitality and absolute comfort.
+                experience genuine{" "}
+                <span className="text-accent-orange font-medium">Himalayan</span>{" "}
+                hospitality and absolute comfort.
               </p>
 
               {/* Highlights Grid */}
@@ -133,11 +145,10 @@ const About = () => {
                   {aboutImages.map((_, idx) => (
                     <div
                       key={idx}
-                      className={`h-2 rounded-full transition-all duration-500 ${
-                        idx === currentSlide
-                          ? "w-8 bg-accent-orange shadow-md"
-                          : "w-2 bg-white/70 shadow-md"
-                      }`}
+                      className={`h-2 rounded-full transition-all duration-500 ${idx === currentSlide
+                        ? "w-8 bg-accent-orange shadow-md"
+                        : "w-2 bg-white/70 shadow-md"
+                        }`}
                     />
                   ))}
                 </div>

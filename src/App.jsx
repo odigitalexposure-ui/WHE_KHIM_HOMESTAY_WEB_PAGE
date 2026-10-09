@@ -8,6 +8,7 @@ import About from "./components/About";
 import Services from "./components/Services";
 import Pricing from "./components/Pricing";
 import Gallery from "./components/Gallery";
+import TouristSpots from "./components/TouristSpots";
 import VideoGallery from "./components/VideoGallery";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
@@ -32,6 +33,7 @@ function App() {
         <Hero />
         <Features />
         <About />
+        <TouristSpots />
         <Services />
         <Gallery />
         <Pricing />
