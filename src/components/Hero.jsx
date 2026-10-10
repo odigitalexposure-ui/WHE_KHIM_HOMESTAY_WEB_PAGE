@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { businessInfo, heroImages } from "../data/content";
+import { TypeAnimation } from 'react-type-animation';
 
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -61,8 +62,17 @@ const Hero = () => {
           style={{ animationDelay: '0.4s', animationFillMode: 'both' }}
         >
           Escape to the <br />
-          <span className="font-brush text-[4.5rem] md:text-[8rem] lg:text-[10rem] text-accent-orange font-normal mt-0 md:mt-2 inline-block drop-shadow-[0_5px_15px_rgba(0,0,0,0.5)] filter brightness-110">
-            Himalayas
+          <span className="font-brush text-[4.5rem] md:text-[8rem] lg:text-[10rem] text-accent-orange font-normal mt-0 md:mt-2 inline-block drop-shadow-[0_5px_15px_rgba(0,0,0,0.5)] filter brightness-110 animate-float-wave">
+            <TypeAnimation
+              sequence={[
+                'Himalayas', 2000, 
+                '', 500, 
+                'Himalayas', 3000
+              ]}
+              wrapper="span"
+              cursor={true}
+              repeat={Infinity}
+            />
           </span>
         </h1>
         
