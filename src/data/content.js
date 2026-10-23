@@ -26,10 +26,26 @@ export const heroImages = [
 ];
 
 export const galleryImages = [
+  // Exterior, Balcony & Scenic Views
+  new URL("../assets/gallery1.jpeg", import.meta.url).href,
+  new URL("../assets/gallery2.jpeg", import.meta.url).href,
+  new URL("../assets/gallery3.jpeg", import.meta.url).href,
+  new URL("../assets/gallery4.jpeg", import.meta.url).href,
+  new URL("../assets/gallery11.jpeg", import.meta.url).href,
+  new URL("../assets/gallery12.jpeg", import.meta.url).href,
+  new URL("../assets/gallery_new_ext.png", import.meta.url).href,
   ...[2, 7, 9, 12, 14, 17].map(
     (i) => new URL(`../assets/img${i}.jpeg`, import.meta.url).href,
   ),
-  new URL("../assets/gallery_new_ext.png", import.meta.url).href,
+
+  // Bedroom & Bathroom Images (placed at the end)
+  new URL("../assets/gallery5.jpeg", import.meta.url).href,
+  new URL("../assets/gallery6.jpeg", import.meta.url).href,
+  new URL("../assets/gallery7.jpeg", import.meta.url).href,
+  new URL("../assets/gallery8.jpeg", import.meta.url).href,
+  new URL("../assets/gallery9.jpeg", import.meta.url).href,
+  new URL("../assets/gallery10.jpeg", import.meta.url).href,
+  new URL("../assets/gallery13.jpeg", import.meta.url).href,
   new URL("../assets/gallery_new_bed.png", import.meta.url).href,
   new URL("../assets/gallery_new_bath.jpg", import.meta.url).href,
 ];
