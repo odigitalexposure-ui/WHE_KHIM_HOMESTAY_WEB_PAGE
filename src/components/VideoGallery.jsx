@@ -1,19 +1,30 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { videos } from "../data/content";
 import { X, ChevronLeft, ChevronRight, Play } from "lucide-react";
 
 const VideoGallery = () => {
   const [selectedIdx, setSelectedIdx] = useState(null);
 
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (selectedIdx === null) return;
+      if (e.key === "Escape") handleClose();
+      if (e.key === "ArrowLeft") handlePrev(e);
+      if (e.key === "ArrowRight") handleNext(e);
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [selectedIdx]);
+
   if (!videos || videos.length === 0) return null;
 
   const handleNext = (e) => {
-    e.stopPropagation();
+    if (e) e.stopPropagation();
     setSelectedIdx((prev) => (prev + 1) % videos.length);
   };
 
   const handlePrev = (e) => {
-    e.stopPropagation();
+    if (e) e.stopPropagation();
     setSelectedIdx((prev) => (prev - 1 + videos.length) % videos.length);
   };
 
@@ -37,12 +48,12 @@ const VideoGallery = () => {
         </div>
 
         {/* Video Grid (Thumbnails) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {videos.map((vid, index) => (
             <div 
               key={index} 
               data-aos="fade-up"
-              data-aos-delay={(index % 2) * 200}
+              data-aos-delay={(index % 3) * 150}
               className="relative rounded-xl overflow-hidden bg-black shadow-lg hover:shadow-2xl hover:shadow-black/40 hover:-translate-y-2 transition-all duration-500 cursor-pointer group aspect-video"
               onClick={() => setSelectedIdx(index)}
             >
@@ -72,6 +83,7 @@ const VideoGallery = () => {
           <button 
             className="absolute top-6 right-6 md:top-10 md:right-10 text-white/70 hover:text-white transition-colors z-50 p-2 bg-white/10 backdrop-blur-md rounded-full hover:bg-white/20"
             onClick={handleClose}
+            aria-label="Close video player"
           >
             <X size={32} />
           </button>
@@ -80,6 +92,7 @@ const VideoGallery = () => {
           <button 
             className="absolute left-2 md:left-10 text-white/70 hover:text-white transition-colors z-50 p-2 md:p-3 bg-black/20 backdrop-blur-md rounded-full hover:bg-black/40"
             onClick={handlePrev}
+            aria-label="Previous video"
           >
             <ChevronLeft size={36} />
           </button>
@@ -102,6 +115,7 @@ const VideoGallery = () => {
           <button 
             className="absolute right-2 md:right-10 text-white/70 hover:text-white transition-colors z-50 p-2 md:p-3 bg-black/20 backdrop-blur-md rounded-full hover:bg-black/40"
             onClick={handleNext}
+            aria-label="Next video"
           >
             <ChevronRight size={36} />
           </button>

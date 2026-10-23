@@ -75,7 +75,7 @@ const Hero = () => {
 
         {/* Subtitle */}
         <p
-          className="text-g  ray-200 text-sm md:text-xl lg:text-2xl mb-10 max-w-2xl font-light drop-shadow-lg leading-relaxed animate-fade-in-up"
+          className="text-gray-200 text-sm md:text-xl lg:text-2xl mb-10 max-w-2xl font-light drop-shadow-lg leading-relaxed animate-fade-in-up"
           style={{ animationDelay: "0.6s", animationFillMode: "both" }}
         >
           Experience serene luxury and authentic hospitality at{" "}
