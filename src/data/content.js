@@ -50,10 +50,13 @@ export const galleryImages = [
   new URL("../assets/gallery_new_bath.jpg", import.meta.url).href,
 ];
 
-export const videos = Array.from(
-  { length: 4 },
-  (_, i) => new URL(`../assets/vid${i + 1}.mp4`, import.meta.url).href,
-);
+export const videos = [
+  new URL("../assets/vid1.mp4", import.meta.url).href,
+  new URL("../assets/vid2.mp4", import.meta.url).href,
+  new URL("../assets/vid3.mp4", import.meta.url).href,
+  new URL("../assets/vid4.mp4", import.meta.url).href,
+  new URL("../assets/vid5 .mp4", import.meta.url).href,
+];
 
 export const pricing = [
   {
