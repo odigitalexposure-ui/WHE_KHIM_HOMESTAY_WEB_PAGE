@@ -33,19 +33,35 @@ export const galleryImages = [
   new URL("../assets/gallery4.jpeg", import.meta.url).href,
   new URL("../assets/gallery11.jpeg", import.meta.url).href,
   new URL("../assets/gallery12.jpeg", import.meta.url).href,
+  new URL("../assets/gallery14.png", import.meta.url).href,
+  new URL("../assets/gallery15.png", import.meta.url).href,
+  new URL("../assets/gallery16.png", import.meta.url).href,
+  new URL("../assets/gallery17.jpg", import.meta.url).href,
+  new URL("../assets/gallery18.jpg", import.meta.url).href,
+  new URL("../assets/gallery19.jpg", import.meta.url).href,
+  new URL("../assets/gallery20.jpg", import.meta.url).href,
+  // new URL("../assets/gallery21.jpg", import.meta.url).href,
   new URL("../assets/gallery_new_ext.png", import.meta.url).href,
   ...[2, 7, 9, 12, 14, 17].map(
     (i) => new URL(`../assets/img${i}.jpeg`, import.meta.url).href,
   ),
 
+  // Dining & Homestay Experience
+  new URL("../assets/gallery25.png", import.meta.url).href,
+  new URL("../assets/gallery22.jpg", import.meta.url).href,
+  new URL("../assets/gallery23.jpg", import.meta.url).href,
+
   // Bedroom & Bathroom Images (placed at the end)
-  new URL("../assets/gallery5.jpeg", import.meta.url).href,
+  // new URL("../assets/gallery5.jpeg", import.meta.url).href,
   new URL("../assets/gallery6.jpeg", import.meta.url).href,
   new URL("../assets/gallery7.jpeg", import.meta.url).href,
   new URL("../assets/gallery8.jpeg", import.meta.url).href,
   new URL("../assets/gallery9.jpeg", import.meta.url).href,
   new URL("../assets/gallery10.jpeg", import.meta.url).href,
   new URL("../assets/gallery13.jpeg", import.meta.url).href,
+  new URL("../assets/gallery24.png", import.meta.url).href,
+  // new URL("../assets/gallery26.jpg", import.meta.url).href,
+  new URL("../assets/gallery27.jpg", import.meta.url).href,
   new URL("../assets/gallery_new_bed.png", import.meta.url).href,
   new URL("../assets/gallery_new_bath.jpg", import.meta.url).href,
 ];
@@ -55,7 +71,13 @@ export const videos = [
   new URL("../assets/vid2.mp4", import.meta.url).href,
   new URL("../assets/vid3.mp4", import.meta.url).href,
   new URL("../assets/vid4.mp4", import.meta.url).href,
-  new URL("../assets/vid5 .mp4", import.meta.url).href,
+  new URL("../assets/vid5.mp4", import.meta.url).href,
+  new URL("../assets/vid6.mp4", import.meta.url).href,
+  new URL("../assets/vid7.mp4", import.meta.url).href,
+  new URL("../assets/vid8.mp4", import.meta.url).href,
+  new URL("../assets/vid9.mp4", import.meta.url).href,
+  new URL("../assets/vid10.mp4", import.meta.url).href,
+  new URL("../assets/vid11.mp4", import.meta.url).href,
 ];
 
 export const pricing = [
